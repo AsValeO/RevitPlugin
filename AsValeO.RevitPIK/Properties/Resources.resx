@@ -117,101 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="roomFinishes_all_rooms_radio" xml:space="preserve">
-    <value>All rooms in current view</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FloorFinishesLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorFinishesLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="roomFinishes_board_height_label" xml:space="preserve">
-    <value>Skirting board height:</value>
+  <data name="FloorFinishesSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorFinishesSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="roomFinishes_button_name" xml:space="preserve">
-    <value>Skirting
-Board</value>
+  <data name="RoomFinishLarge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomFinishLarge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="roomFinishes_Cancel_Button" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="roomFinishes_heightValueError" xml:space="preserve">
-    <value>Please enter a height value for the skirting board :</value>
-  </data>
-  <data name="roomFinishes_OK_Button" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="roomFinishes_ribbon_panel_name" xml:space="preserve">
-    <value>Room Finishes</value>
-  </data>
-  <data name="roomFinishes_selected_rooms_radio" xml:space="preserve">
-    <value>Only selected rooms</value>
-  </data>
-  <data name="roomFinishes_select_wall_label" xml:space="preserve">
-    <value>Select a wall type for a skirting board :</value>
-  </data>
-  <data name="roomFinishes_TaskDialogName" xml:space="preserve">
-    <value>Create skirting board</value>
-  </data>
-  <data name="roomFinishes_toolTip" xml:space="preserve">
-    <value>Create skirting boards</value>
-  </data>
-  <data name="roomFinishes_transactionName" xml:space="preserve">
-    <value>Creating boundary finishes</value>
-  </data>
-  <data name="roomFinishes_unexpectedError" xml:space="preserve">
-    <value>Command is failed for unexpected reason.</value>
-  </data>
-  <data name="roomFinishes_verticallyCompoundError" xml:space="preserve">
-    <value>This function will not work on wall type with a vertically compound structure.</value>
-  </data>
-  <data name="levelTag_parameter_group" xml:space="preserve">
-    <value>Elevation</value>
-  </data>
-  <data name="levelTag_bottom_elevation_max" xml:space="preserve">
-    <value>Bottom Elevation Max</value>
-  </data>
-  <data name="levelTag_bottom_elevation_min" xml:space="preserve">
-    <value>Bottom Elevation Min</value>
-  </data>
-  <data name="levelTag_top_elevation_max" xml:space="preserve">
-    <value>Top Elevation Max</value>
-  </data>
-  <data name="levelTag_top_elevation_min" xml:space="preserve">
-    <value>Top Elevation Min</value>
-  </data>
-  <data name="roomFinishes_SelectRooms" xml:space="preserve">
-    <value>Select Rooms</value>
-  </data>
-  <data name="floorFinishes_heightValueError" xml:space="preserve">
-    <value>Please enter an elevation value for the floor :</value>
-  </data>
-  <data name="floorFinishes_ribbon_panel_name" xml:space="preserve">
-    <value>Floor Finishes</value>
-  </data>
-  <data name="floorFinishes_select_floor_label" xml:space="preserve">
-    <value>Select a floor type :</value>
-  </data>
-  <data name="floorFinishes_TaskDialogName" xml:space="preserve">
-    <value>Create floor finishes</value>
-  </data>
-  <data name="floorFinishes_toolTip" xml:space="preserve">
-    <value>Create finishing floor</value>
-  </data>
-  <data name="floorFinishes_transactionName" xml:space="preserve">
-    <value>Floor finish</value>
-  </data>
-  <data name="floorFinishes_unexpectedError" xml:space="preserve">
-    <value>Command is failed for unexpected reason.</value>
-  </data>
-  <data name="floorFinishes_height_label" xml:space="preserve">
-    <value>From value</value>
-  </data>
-  <data name="floorFinishes_groupboxName" xml:space="preserve">
-    <value>Floor height</value>
-  </data>
-  <data name="floorFinishes_height_param_label" xml:space="preserve">
-    <value>From parameter</value>
-  </data>
-  <data name="floorFinishes_noRoomError" xml:space="preserve">
-    <value>There is no room in the current model</value>
-  </data>
-  <data name="roomFinishes_joinWalls" xml:space="preserve">
-    <value>Join geometry</value>
+  <data name="RoomFinishSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RoomFinishSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

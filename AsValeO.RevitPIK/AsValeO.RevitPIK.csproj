@@ -44,7 +44,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'RoomFinishingEn|AnyCPU'">
-    <OutputPath>bin\RoomFinishingEn\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <Optimize>false</Optimize>
     <DebugType>pdbonly</DebugType>
@@ -87,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,39 +99,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Resources\en.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>en.resx</DependentUpon>
+    <Compile Include="Extensions\RevitElementExtensions.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Controls\PluginControl.xaml.cs">
+      <DependentUpon>PluginControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Resources\fr.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>fr.resx</DependentUpon>
-    </Compile>
-    <Compile Include="RoomFinishing\FloorsFinishesControl.xaml.cs">
-      <DependentUpon>FloorsFinishesControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="RoomFinishing\FloorFinishes.cs" />
-    <Compile Include="RoomFinishing\RoomsFinishes.cs" />
-    <Compile Include="RoomFinishing\RoomsFinishesControl.xaml.cs">
-      <DependentUpon>RoomsFinishesControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Tools.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\en.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>en.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\fr.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>fr.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="RoomFinishes.addin" />
-    <EmbeddedResource Include="Resources\BIM42HelpEn.chm" />
-    <EmbeddedResource Include="Resources\BIM42HelpFr.chm" />
+    <None Include="AsValeO.RevitPIK.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,11 +123,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Page Include="RoomFinishing\FloorsFinishesControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="RoomFinishing\RoomsFinishesControl.xaml">
+    <Page Include="Controls\PluginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,14 +140,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\FloorFinishesSmall.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="AfterClean">
-    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2016\RoomFinishes.addin" />
-    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2016\RoomFinishes.dll" />
-  </Target>
   <PropertyGroup>
-    <PostBuildEvent>set SolutionName=Align
-set SigntoolPath="C:\Program Files (x86)\Windows Kits\10\bin\10.0.16299.0\x64\signtool.exe"
-call %25SigntoolPath%25 sign /sha1 3b428f7d77548f2f10a204bd551da1c3ede7c0e7 /d "%25SolutioName%25" /du "http://www.eai.fr" /t "http://timestamp.comodoca.com/authenticode" /fd sha256 "$(TargetPath)"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
